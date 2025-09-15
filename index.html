@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Weather</h2>
+            <div class="weather-input">
+                <input type="text" name="city" id="city_input" placeholder="Enter city name">
+                <button type="button" id="searchBtn">🔍 Search</button>
+                <button type="button" id="locationBtn">📍 Current Location</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="weather-data">
+        <div class="weather-left">
+            <div class="card">
+                <div class="current-weather">
+                    <div class="details">
+                        <p>NOW</p>
+                        <h2>___°C</h2>
+                        <p>_____</p>
+                    </div>
+                    <div class="weather-icon">
+                        <img src="http://openweathermap.org/img/wn/04d@2x.png" alt="">
+                    </div>
+                </div>
+                <hr>
+                <div class="card-footer">
+                    <p>📅 _____</p>
+                    <p>📍 _____</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>5 days Forecast</h2>
+                <div class="day-forecast">
+                    <!-- Example item -->
+                    <div class="forecast-item">
+                        <div class="icon-wrapper">
+                            <img src="https://openweathermap.org/img/wn/02d.png" alt="">
+                            <span>___°C</span>
+                        </div>
+                        <p>____</p>
+                        <p>____</p>
+                    </div>
+                    <!-- Repeat for other days -->
+                </div>
+            </div>
+        </div>
+
+        <div class="weather-right">
+            <h2>Today's Highlights</h2>
+            <div class="highlights">
+                <!-- Air Quality -->
+                <div class="card">
+                    <div class="card-head">
+                        <p><b>🌫️ Air Quality Index</b></p>
+                        <p class="air-index aqi-1">Good</p>
+                    </div>
+                    <div class="air-indices">
+                        🌬️
+                        <div class="item"><p>PM2.5</p><h2>____</h2></div>
+                        <div class="item"><p>PM10</p><h2>____</h2></div>
+                        <div class="item"><p>SO2</p><h2>____</h2></div>
+                        <div class="item"><p>CO</p><h2>____</h2></div>
+                        <div class="item"><p>NO</p><h2>____</h2></div>
+                        <div class="item"><p>NO2</p><h2>____</h2></div>
+                        <div class="item"><p>NH3</p><h2>____</h2></div>
+                        <div class="item"><p>O3</p><h2>____</h2></div>
+                    </div>
+                </div>
+
+                <!-- Sunrise & Sunset -->
+                <div class="card">
+                    <div class="card-head"><p><b>Sunrise & Sunset</b></p></div>
+                    <div class="sunrise-sunset">
+                        <div class="item">
+                            <div class="icon">🌅</div>
+                            <div><p><b>Sunrise</b></p><h2>____</h2></div>
+                        </div>
+                        <div class="item">
+                            <div class="icon">🌇</div>
+                            <div><p><b>Sunset</b></p><h2>____</h2></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Humidity -->
+                <div class="card">
+                    <div class="card-head"><p><b>💧 Humidity</b></p></div>
+                    <div class="card-item"><h2 id="humidityVal">____%</h2></div>
+                </div>
+
+                <!-- Pressure -->
+                <div class="card">
+                    <div class="card-head"><p><b>📊 Pressure</b></p></div>
+                    <div class="card-item"><h2 id="pressureVal">____hPa</h2></div>
+                </div>
+
+                <!-- Visibility -->
+                <div class="card">
+                    <div class="card-head"><p><b>👁️ Visibility</b></p></div>
+                    <div class="card-item"><h2 id="visibilityVal">____km</h2></div>
+                </div>
+
+                <!-- Wind Speed -->
+                <div class="card">
+                    <div class="card-head"><p><b>🌬️ Wind Speed</p></div>
+                    <div class="card-item"><h2 id="windSpeedVal">____m/s</h2></div>
+                </div>
+
+                <!-- Feels Like -->
+                <div class="card">
+                    <div class="card-head"><p><b>🌡️ Feels like</b></p></div>
+                    <div class="card-item"><h2 id="feelsVal">____°C</h2></div>
+                </div>
+            </div>
+
+            <h2>Today at</h2>
+            <div class="hourly-forecast">
+                <div class="card"><p>9 AM</p><img src="https://openweathermap.org/img/wn/04d.png" alt=""><p>___°C</p></div>
+                <!-- Repeat for more hours -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://momentjs.com/downloads/moment.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
